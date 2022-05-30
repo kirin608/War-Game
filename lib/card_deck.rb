@@ -1,5 +1,5 @@
 class CardDeck
-  def cardsLeft
+  def cards_left
     52
   end
 
