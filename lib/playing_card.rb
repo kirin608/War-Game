@@ -15,4 +15,7 @@
         @suit
     end
 
+    def ==(other)
+        @suit == other.suit && @rank == other.rank
+    end
  end
