@@ -4,21 +4,22 @@
 
   def initialize
     @deck = CardDeck.new
-   @player1 = player1
-   @player2 = player2
+   @player_one = player_one
+   @player_two = player_two
   end
 
-  def deal
+   def start
+     until deck.cards_left > 0
+       player_one.take_cards(deck.deal)
+       player_two.take_cards(deck.deal)
+     end
+   end
+
+   def player_one
     
-  end
-
-  def user1
-    @user1 = @deck[0..24]
-    @user1= user1.shufle
-  end
-  def user2
-    @user2 = @deck[25..51]
-    @user2 = user2.shufle
-  end
+   end
+   def player_two
+   
+   end
 
  end

@@ -16,6 +16,15 @@ describe 'PlayingCard' do
         expect(card.suit).to be_nil
     end
 
+
+    it ('should return a value for the card') do
+        card = PlayingCard.new('5','spades')
+        expect(card.card_value).to(eq(5))
+        card = PlayingCard.new('J','spades')
+        expect(card.card_value).to(eq(11))
+    end
+   
+   
     # it 'has valid rank' do
     #     card = PlayingCard.new('4','diamonds')
     #     PlayingCard::RANKS

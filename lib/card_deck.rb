@@ -4,7 +4,9 @@ class CardDeck
   def initialize(cards = build_deck)
     @cards = cards 
   end
-
+  def==(other)
+    respond_to?(:cards)&& cards == other.cards
+  end
   public
 
   def cards_left
